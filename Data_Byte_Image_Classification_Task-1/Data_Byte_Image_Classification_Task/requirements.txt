@@ -1,0 +1,5 @@
+opencv-python
+ultralytics
+datatime
+flask 
+pillow

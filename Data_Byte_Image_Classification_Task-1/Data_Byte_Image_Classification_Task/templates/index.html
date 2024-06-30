@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer Image Classifier</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000; /* Black background color */
+            color: #ffffff; /* White text color */
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #1a1a1a; /* Dark gray box background color */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* White box shadow for depth */
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* White text color */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            background-color: #ffffff; /* White background color for input */
+            color: #000000; /* Black text color for input */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff6347; /* Demon Slayer theme color */
+            color: #ffffff; /* White text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #cc4736; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Demon Slayer Image Classifier</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer Classification Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000; /* Black background color */
+            color: #ffffff; /* White text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1a1a1a; /* Dark gray box background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Dark box shadow for depth */
+            display: flex;
+            align-items: center;
+        }
+
+        .image-container {
+            flex: 1; /* Takes up 50% of container width */
+            margin-right: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White box shadow for image */
+        }
+
+        .text-container {
+            flex: 2; /* Takes up 50% of container width */
+        }
+
+        h1 {
+            color: #ffffff; /* White text color */
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #333333; /* Dark gray background color */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* White box shadow for list items */
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff6347; /* Highlight color */
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff6347; /* Demon Slayer theme color */
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #cc4736; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='uploads/' ~ filepath) }}" alt="Uploaded Image">
+        </div>
+        <div class="text-container">
+            <h1>Demon Slayer Classification Result</h1>
+            <h2>Results:</h2>
+            <ul>
+                {% for result in results %}
+                    <li><span class="highlight">{{ result.class }}</span> is identified in the image above.</li>
+                    <li>Class: {{ result.class }}, Confidence: {{ result.confidence }}, BBox: ({{ result.xmin }}, {{ result.ymin }}, {{ result.xmax }}, {{ result.ymax }})</li>
+                {% endfor %}
+            </ul>
+            <a href="/">Upload another image</a>
+        </div>
+    </div>
+</body>
+</html>
