@@ -15,6 +15,7 @@ This repository is created for the submission of Beginner Task of Databyte Induc
  scraping techniques. Your goal is to develop an algorithm that can automatically
  classify these images into their respective categories based on the figurine
  character.
+ <br><br>
  Dataset:
  The dataset must consist of a collection of images of superhero and anime
  figurines from different sources. Each image should be labeled with the name of
