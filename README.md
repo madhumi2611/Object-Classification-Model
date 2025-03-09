@@ -1,9 +1,10 @@
 # Databyte-Inductions (Computer Vision)
 This repository is created for the submission of Beginner Task of Databyte Inductions. I have built a model based on the Problem Statement-2.
-<br>
+<br> <br>
 <b>Problem Statement 2</br>
  PS2:Classification of different superhero /
  animefigurines using Image Classification
+ <hr>
  Collecting superhero and anime figurines is a popular hobby among enthusiasts,
  with a wide variety of characters and designs available. Deep learning algorithms,
  specifically convolutional neural networks (CNNs), have the potential to
